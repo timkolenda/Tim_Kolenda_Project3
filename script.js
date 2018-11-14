@@ -13,10 +13,14 @@
     //create object with an array of questions
 
     quizApp.customQuestionList = {
-        partner: ['question1', 'question2', 'question3'],
+        partner: [
+            'question1', 
+            'question2', 
+            'question3'
+        ],
         family: ['question1', 'question2', 'question3'],
         friend: ['question1', 'question2', 'question3'],
-        aquantance: ['question1', 'question2', 'question3']
+        aquaintance: ['question1', 'question2', 'question3']
     }
     
     quizApp.responses = {
@@ -30,6 +34,7 @@
     quizApp.init = function() {
         quizApp.getNames();
         quizApp.answerCollector('relationshipChoice');
+        quizApp.provideQuestionsToUser();
     }
     
     quizApp.getNames = function() {
@@ -46,38 +51,34 @@
     quizApp.answerCollector = function(question){
         $(`.${question}`).on('submit', function(event){
             event.preventDefault();
-            console.log('submitted');                        
+            // console.log('submitted');                        
             quizApp[question] = $('input[type=radio]:checked').val();
-            console.log(quizApp.question);
+            console.log(quizApp[question]);
         });
     } 
 
 
 
+    //take the relationshipChoice variable and pass it through custom questions object to get the question array
+    
+    quizApp.provideQuestionsToUser = function() {
+        $('.relationshipChoice').on('submit', function(){
+            console.log('provide Questions');
+            let i = 1;
+            quizApp.customQuestionList[quizApp.relationshipChoice].forEach(function(){
+                //find the section with the class of question1, then prepend the first array item to that element
+                console.log(i);
+                i ++;
+                
+    
+            });
+        });
+    };
 
-    // quizApp.answerCollector = function (que) {
-    //     $('index[type=radio]').click(function () {
-    //         // event.preventDefault();
-    //         console.log(clicked);
-    //         quizApp.question = $('index[type=radio]:checked').val();
-    //         // console.log(quizApp.question);
-    //     });
-    // }
-
-    
-    
 
 
-    
-    
 
-    
-    // const userRelationshipChoice = function() {
-    //     return $('input[type=radio]:checked').val();
-    // }
-    
-    // const relationshipType = $('input[type=radio]:checked').val();
-    // console.log(relationshipType);
+
 
 
 
