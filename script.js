@@ -118,11 +118,75 @@
         },
     }
     
-    quizApp.responses = {
-        goodgift: ['positive family responses', 'positive SO responese', 'positive friend responses', 'positive aquaintance responces'],
-        something: ['ok family responses', 'ok SO responese', 'ok friend responses', 'ok aquaintance responces'],
-        noGift: ['negitive family responses', 'negitive SO responese', 'negitive friend responses', 'negitive aquaintance responces']
-    }
+    quizApp.response = {
+        goodGift: {
+            partner: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],            
+            family: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            friend: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],      
+            aquaintance: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ]
+        },    
+        mediocreGift: {
+            partner: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            family: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            friend: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            aquaintance: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ]
+        },    
+        noGift: {
+            partner: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            family: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            friend: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ],
+            aquaintance: [
+                'randomResponse1',
+                'randomResponse2',
+                'randonResponse3'
+            ]
+        }
+    }    
+        
 
     quizApp.init = function() {
         quizApp.getNames();
@@ -131,6 +195,7 @@
         quizApp.answerCollector('firstAnswer');
         quizApp.answerCollector('secondAnswer');
         quizApp.answerCollector('thirdAnswer');
+        quizApp.giftTypeCalculator();
     }
     
     quizApp.getNames = function() {
@@ -172,6 +237,36 @@
             });
         });
     };
+
+    
+    //tally points and drop reciever in one of three gift buckets
+    quizApp.giftTypeCalculator = function() {
+        $('.generateResponse').on('click', function(){
+            quizApp.score = parseInt(quizApp.firstAnswer) + parseInt(quizApp.secondAnswer) + parseInt(quizApp.thirdAnswer);
+            console.log(quizApp.score);
+            if (quizApp.score <= 4){
+                quizApp.giftType = 'noGift';
+            } else if (quizApp.score <= 8){
+                quizApp.giftType = 'mediocreGift';
+            } else {
+                quizApp.giftType = 'goodGift';
+            }
+            console.log(quizApp.giftType);
+            quizApp.responseGenerator();
+        });
+    }
+
+    quizApp.responseGenerator = function() {
+        //tally points from questions - if total is over 8 award 'goodGift' over 4 award 'mediocreGift' below 4 'noGift'
+        //choose the array that matches the 'relationshipChoice' variable as well as the gift
+        const arrayNumber = Math.floor(Math.random() * 3);
+        console.log(`arrayNumber is ${arrayNumber}`);
+        const response = quizApp.response[quizApp.giftType][quizApp.relationshipChoice][0];
+        console.log(response);
+
+    }
+
+
 
     //give answers value
 
