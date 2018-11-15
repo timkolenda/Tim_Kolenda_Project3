@@ -14,13 +14,108 @@
 
     quizApp.customQuestionList = {
         partner: [
-            'question1', 
-            'question2', 
-            'question3'
+            '<H2>question1</H2>', 
+            '<H2>question2</H2>', 
+            '<H2>question3</H2>'
         ],
-        family: ['question1', 'question2', 'question3'],
-        friend: ['question1', 'question2', 'question3'],
-        aquaintance: ['question1', 'question2', 'question3']
+        family: [
+            '<H2>question1</H2>',
+            '<H2>question2</H2>',
+            '<H2>question3</H2>'
+        ],
+        friend: [
+            '<H2>question1</H2>',
+            '<H2>question2</H2>',
+            '<H2>question3</H2>'
+        ],
+        aquaintance: [
+            '<H2>question1</H2>',
+            '<H2>question2</H2>',
+            '<H2>question3</H2>'
+        ]
+    }
+
+    quizApp.answerList = {
+        partner: {
+            question1: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question2: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question3: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ]
+        },
+        family: {
+            question1: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question2: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question3: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ]
+        },
+        friend: {
+            question1: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question2: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question3: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ]
+        },
+        aquaintance: {
+            question1: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question2: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ],
+            question3: [
+                'answer1',
+                'answer2',
+                'answer3',
+                'answer4'
+            ]
+        },
     }
     
     quizApp.responses = {
@@ -29,12 +124,13 @@
         noGift: ['negitive family responses', 'negitive SO responese', 'negitive friend responses', 'negitive aquaintance responces']
     }
 
-    
-
     quizApp.init = function() {
         quizApp.getNames();
         quizApp.answerCollector('relationshipChoice');
         quizApp.provideQuestionsToUser();
+        quizApp.answerCollector('firstAnswer');
+        quizApp.answerCollector('secondAnswer');
+        quizApp.answerCollector('thirdAnswer');
     }
     
     quizApp.getNames = function() {
@@ -43,37 +139,43 @@
             // console.log('submitted');
             quizApp.userName = $('#user-name').val();
             quizApp.recieverName = $('#reciever-name').val();
-            console.log(quizApp.userName);
-            console.log(quizApp.recieverName);
+            // console.log(quizApp.userName);
+            // console.log(quizApp.recieverName);
         });
     }   
 
     quizApp.answerCollector = function(question){
         $(`.${question}`).on('submit', function(event){
+            console.log(question);
             event.preventDefault();
             // console.log('submitted');                        
-            quizApp[question] = $('input[type=radio]:checked').val();
+            quizApp[question] = $(`.${question} input[type=radio]:checked`).val();
             console.log(quizApp[question]);
         });
     } 
-
-
 
     //take the relationshipChoice variable and pass it through custom questions object to get the question array
     
     quizApp.provideQuestionsToUser = function() {
         $('.relationshipChoice').on('submit', function(){
-            console.log('provide Questions');
+            // console.log('provide Questions');
             let i = 1;
-            quizApp.customQuestionList[quizApp.relationshipChoice].forEach(function(){
-                //find the section with the class of question1, then prepend the first array item to that element
-                console.log(i);
-                i ++;
-                
-    
+            quizApp.customQuestionList[quizApp.relationshipChoice].forEach(function(question){
+                $(`.question${i}`).prepend(question);  
+                let n = 1;            
+                quizApp.answerList[quizApp.relationshipChoice][`question${i}`].forEach(function(answer){
+                    $(`.question${i}-answer${n}`).prepend(answer);
+                    // console.log(n);
+                    n++;
+                });
+                i++;
             });
         });
     };
+
+    //give answers value
+
+
 
 
 
