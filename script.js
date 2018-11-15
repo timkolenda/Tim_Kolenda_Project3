@@ -190,12 +190,14 @@
 
     quizApp.init = function() {
         quizApp.getNames();
+        quizApp.gameBoardDisplay();
         quizApp.answerCollector('relationshipChoice');
         quizApp.provideQuestionsToUser();
         quizApp.answerCollector('firstAnswer');
         quizApp.answerCollector('secondAnswer');
         quizApp.answerCollector('thirdAnswer');
         quizApp.giftTypeCalculator();
+
     }
     
     quizApp.getNames = function() {
@@ -237,7 +239,6 @@
             });
         });
     };
-
     
     //tally points and drop reciever in one of three gift buckets
     quizApp.giftTypeCalculator = function() {
@@ -265,6 +266,27 @@
         console.log(response);
 
     }
+
+    quizApp.gameBoardDisplay = function(){
+        console.log('set');
+        for(i = 1; i <= 5; i++){
+            console.log(i);
+            $(`.changeGameBoard${i}`).click(function(){
+                console.log('click');
+                $(`.gameBoard${i - 1}`).toggleClass('visuallyhidden');
+                $(`.gameBoard${i}`).toggleClass('visuallyhidden');
+                // return
+            });
+        };
+    }
+
+    //set i to 0
+    //set i = 1
+    //listen for click button changeGBi
+    //hide GB(i-1)
+    //display GBi
+    //return
+    //i++
 
 
 

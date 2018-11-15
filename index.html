@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 3</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
@@ -14,16 +14,16 @@
     </header>
     <div class="wrapper">
         <main id="quiz-start">
-            <section class="who-is-playing">
+            <section class="who-is-playing gameBoard0">
                 <form class="names">
-                    <label for="user-name" class="visuallyHidden"></label>
+                    <label for="user-name" class="visuallyhidden"></label>
                     <input type="text" id="user-name"> 
-                    <label for="reciever-name" class="visuallyHidden"></label>
+                    <label for="reciever-name" class="visuallyhidden"></label>
                     <input type="text" id="reciever-name">
-                    <button>Get Started</button>
+                    <button class="changeGameBoard1">Get Started</button>
                 </form>
             </section>
-            <section class="base-question">
+            <section class="gameBoard1 base-question visuallyhidden">
                 <h2>Whitch of the following best describes your relationship</h2>
                 <form class="relationshipChoice">
                     <label class="relationship-choice-partner" for="partner">Partner</label>
@@ -34,52 +34,52 @@
                     <input type="radio" name="relationship-option" id="friend" value="friend">
                     <label class="relationship-choice-aquaintance" for="aquaintance">Aquaintance</label>
                     <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance">
-                    <button class="question-list-trigger">Next</button>
+                    <button class="question-list-trigger changeGameBoard2">Next</button>
                 </form>
             </section>
-            <section class="question1">  
+            <section class="question1 gameBoard2 visuallyhidden">  
                 <!-- H2 will be dropped in here through JS -->
                 <form class="firstAnswer">
-                    <label for="#question1-answer1" class="question1-answer1"></label>
+                    <label for="question1-answer1" class="question1-answer1"></label>
                     <input type="radio" name="answer-to-question1" id="question1-answer1" value=4>
-                    <label for="#question1-answer2" class="question1-answer2"></label>
+                    <label for="question1-answer2" class="question1-answer2"></label>
                     <input type="radio" name="answer-to-question1" id="question1-answer2" value=3>
-                    <label for="#question1-answer3" class="question1-answer3"></label>
+                    <label for="question1-answer3" class="question1-answer3"></label>
                     <input type="radio" name="answer-to-question1" id="question1-answer3" value=2>
-                    <label for="#question1-answer4" class="question1-answer4"></label>
+                    <label for="question1-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question1-answer4" value=1> 
-                    <button>Submit</button>
+                    <button class="changeGameBoard3">Submit</button>
                 </form>
             </section>
-            <section class="question2" class="visuallyHidden">
+            <section class="question2 gameBoard3 visuallyhidden">
                 <!-- H2 will be dropped in here through JS -->
                 <form class="secondAnswer">
-                    <label for="#question1-answer1" class="question1-answer1"></label>
+                    <label for="question2-answer1" class="question1-answer1"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer1" value=4>
-                    <label for="#question1-answer2" class="question1-answer2"></label>
+                    <label for="question2-answer2" class="question1-answer2"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer2" value=3>
-                    <label for="#question1-answer3" class="question1-answer3"></label>
+                    <label for="question2-answer3" class="question1-answer3"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer3" value=2>
-                    <label for="#question1-answer4" class="question1-answer4"></label>
+                    <label for="question2-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer4" value=1>
-                    <button>Submit</button>
+                    <button class="changeGameBoard4">Submit</button>
                 </form>
             </section>
-            <section class="question3" class="visuallyHidden">
+            <section class="question3 gameBoard4 visuallyhidden">
                 <!-- H2 will be dropped in here through JS -->
                 <form class="thirdAnswer">
-                    <label for="#question1-answer1" class="question1-answer1"></label>
+                    <label for="question3-answer1" class="question1-answer1"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer1" value=4>
-                    <label for="#question1-answer2" class="question1-answer2"></label>
+                    <label for="question3-answer2" class="question1-answer2"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer2" value=3>
-                    <label for="#question1-answer3" class="question1-answer3"></label>
+                    <label for="question3-answer3" class="question1-answer3"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer3" value=2>
-                    <label for="#question1-answer4" class="question1-answer4"></label>
+                    <label for="question3-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer4" value=1> 
-                    <button>Submit</button>
+                    <button class="changeGameBoard5">Submit</button>
                 </form>
             </section>
-            <section class="response">
+            <section class="response gameBoard5 visuallyhidden">
                 <a href="#" class=generateResponse>Generate Response</a>
 
             </section>
