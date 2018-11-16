@@ -1,10 +1,11 @@
 
+//   font-family: 'Parisienne', cursive;
+//    font-family: 'Roboto', sans-serif;
 
 body {
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
-
-
 
 h1 {
     font-size: 1.6rem;
@@ -14,4 +15,21 @@ h1 {
 h2{
     font-size: 2.4rem;
     text-align: center;
+}
+
+.quiz {
+    width: 750px;
+    max-width: 80%;
+    border: black 1px solid;
+    border-radius: 60px;
+    margin: auto;
+    display: flex;
+    height: 500px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // width: 100%;
 }
