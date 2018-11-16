@@ -14,24 +14,24 @@
 
     quizApp.customQuestionList = {
         partner: [
-            '<H2>question1</H2>', 
-            '<H2>question2</H2>', 
-            '<H2>question3</H2>'
+            '<H2>How long have you been together?</H2>', 
+            '<H2>How likely is it your parnter has heard "Thankyou, Next" by Ariana Grande</H2>', 
+            '<H2>How likely is it you partner will get you something?</H2>'
         ],
         family: [
-            '<H2>question1</H2>',
-            '<H2>question2</H2>',
+            '<H2>How likely is it you are going to see this person over the holidays?</H2>',
+            '<H2>How likely is it you partner will get you something?</H2>',
             '<H2>question3</H2>'
         ],
         friend: [
-            '<H2>question1</H2>',
-            '<H2>question2</H2>',
+            '<H2></H2>',
+            '<H2>How likely is it you partner will get you something?</H2>',
             '<H2>question3</H2>'
         ],
         aquaintance: [
-            '<H2>question1</H2>',
-            '<H2>question2</H2>',
-            '<H2>question3</H2>'
+            '<H2>How likely is it you partner will get you something?</H2>',
+            '<H2>How often do you run into this person?</H2>',
+            '<H2>Would it be difficult to cut them out of your life entirely?</H2>'
         ]
     }
 

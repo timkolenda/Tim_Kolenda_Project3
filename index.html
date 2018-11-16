@@ -13,14 +13,20 @@
         <!-- <a href="#quiz-start">Get Started</a> -->
     </header>
     <div class="wrapper">
-        <main id="quiz-start">
+        <main id="quiz" class="quiz">
             <section class="who-is-playing game-section">
                 <form class="names">
-                    <label for="user-name" class="visuallyhidden"></label>
-                    <input type="text" id="user-name"> 
-                    <label for="reciever-name" class="visuallyhidden"></label>
-                    <input type="text" id="reciever-name">
-                    <button class="game-section-button">Get Started</button>
+                    <h2>Should you buy them a gift?</h2>
+                    <h1>The best way to decide who is worth shopping for this holiday season!</h1>
+                    <div>
+                        <label for="user-name" >Your Name</label>
+                        <input type="text" id="user-name"> 
+                        <label for="reciever-name" >Their Name</label>
+                        <input type="text" id="reciever-name">
+                    </div>
+                    <div class="button-container">
+                        <button class="game-section-button">Get Started</button>
+                    </div>
                 </form>
             </section>
             <section class="game-section base-question visuallyhidden">
@@ -80,7 +86,7 @@
                 </form>
             </section>
             <section class="response game-section visuallyhidden">
-                <a href="#" class=generateResponse>Generate Response</a>
+                <a href="#" class="generateResponse game-section-button">Generate Response</a>
 
             </section>
             
