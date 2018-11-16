@@ -190,7 +190,7 @@
 
     quizApp.init = function() {
         quizApp.getNames();
-        quizApp.gameBoardDisplay();
+        quizApp.nextSection();
         quizApp.answerCollector('relationshipChoice');
         quizApp.provideQuestionsToUser();
         quizApp.answerCollector('firstAnswer');
@@ -244,7 +244,7 @@
     quizApp.giftTypeCalculator = function() {
         $('.generateResponse').on('click', function(){
             quizApp.score = parseInt(quizApp.firstAnswer) + parseInt(quizApp.secondAnswer) + parseInt(quizApp.thirdAnswer);
-            console.log(quizApp.score);
+            console.log(`score ${quizApp.score}`);
             if (quizApp.score <= 4){
                 quizApp.giftType = 'noGift';
             } else if (quizApp.score <= 8){
@@ -258,27 +258,24 @@
     }
 
     quizApp.responseGenerator = function() {
+        console.log('set');
         //tally points from questions - if total is over 8 award 'goodGift' over 4 award 'mediocreGift' below 4 'noGift'
         //choose the array that matches the 'relationshipChoice' variable as well as the gift
         const arrayNumber = Math.floor(Math.random() * 3);
         console.log(`arrayNumber is ${arrayNumber}`);
         const response = quizApp.response[quizApp.giftType][quizApp.relationshipChoice][0];
         console.log(response);
-
+        $('.response').append(response);
     }
 
-    quizApp.gameBoardDisplay = function(){
-        console.log('set');
-        for(i = 1; i <= 5; i++){
-            console.log(i);
-            $(`.changeGameBoard${i}`).click(function(){
-                console.log('click');
-                $(`.gameBoard${i - 1}`).toggleClass('visuallyhidden');
-                $(`.gameBoard${i}`).toggleClass('visuallyhidden');
-                // return
-            });
-        };
+    quizApp.nextSection = function() {
+        $('.game-section-button').on('click', function(){
+            console.log("clicked");
+            $(this).parents('.game-section').toggleClass('visuallyhidden');
+            $(this).parents('.game-section').next().toggleClass('visuallyhidden');
+        });
     }
+
 
     //set i to 0
     //set i = 1

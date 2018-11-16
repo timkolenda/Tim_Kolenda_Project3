@@ -10,20 +10,20 @@
 <body>
     <header>
         <h1></h1>
-        <a href="#quiz-start">Get Started</a>
+        <!-- <a href="#quiz-start">Get Started</a> -->
     </header>
     <div class="wrapper">
         <main id="quiz-start">
-            <section class="who-is-playing gameBoard0">
+            <section class="who-is-playing game-section">
                 <form class="names">
                     <label for="user-name" class="visuallyhidden"></label>
                     <input type="text" id="user-name"> 
                     <label for="reciever-name" class="visuallyhidden"></label>
                     <input type="text" id="reciever-name">
-                    <button class="changeGameBoard1">Get Started</button>
+                    <button class="game-section-button">Get Started</button>
                 </form>
             </section>
-            <section class="gameBoard1 base-question visuallyhidden">
+            <section class="game-section base-question visuallyhidden">
                 <h2>Whitch of the following best describes your relationship</h2>
                 <form class="relationshipChoice">
                     <label class="relationship-choice-partner" for="partner">Partner</label>
@@ -34,10 +34,10 @@
                     <input type="radio" name="relationship-option" id="friend" value="friend">
                     <label class="relationship-choice-aquaintance" for="aquaintance">Aquaintance</label>
                     <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance">
-                    <button class="question-list-trigger changeGameBoard2">Next</button>
+                    <button class="question-list-trigger game-section-button">Next</button>
                 </form>
             </section>
-            <section class="question1 gameBoard2 visuallyhidden">  
+            <section class="question1 game-section visuallyhidden">  
                 <!-- H2 will be dropped in here through JS -->
                 <form class="firstAnswer">
                     <label for="question1-answer1" class="question1-answer1"></label>
@@ -48,10 +48,10 @@
                     <input type="radio" name="answer-to-question1" id="question1-answer3" value=2>
                     <label for="question1-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question1-answer4" value=1> 
-                    <button class="changeGameBoard3">Submit</button>
+                    <button class="game-section-button">Submit</button>
                 </form>
             </section>
-            <section class="question2 gameBoard3 visuallyhidden">
+            <section class="question2 game-section visuallyhidden">
                 <!-- H2 will be dropped in here through JS -->
                 <form class="secondAnswer">
                     <label for="question2-answer1" class="question1-answer1"></label>
@@ -62,10 +62,10 @@
                     <input type="radio" name="answer-to-question1" id="question2-answer3" value=2>
                     <label for="question2-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer4" value=1>
-                    <button class="changeGameBoard4">Submit</button>
+                    <button class="game-section-button">Submit</button>
                 </form>
             </section>
-            <section class="question3 gameBoard4 visuallyhidden">
+            <section class="question3 game-section visuallyhidden">
                 <!-- H2 will be dropped in here through JS -->
                 <form class="thirdAnswer">
                     <label for="question3-answer1" class="question1-answer1"></label>
@@ -76,10 +76,10 @@
                     <input type="radio" name="answer-to-question1" id="question3-answer3" value=2>
                     <label for="question3-answer4" class="question1-answer4"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer4" value=1> 
-                    <button class="changeGameBoard5">Submit</button>
+                    <button class="game-section-button">Submit</button>
                 </form>
             </section>
-            <section class="response gameBoard5 visuallyhidden">
+            <section class="response game-section visuallyhidden">
                 <a href="#" class=generateResponse>Generate Response</a>
 
             </section>
