@@ -14,24 +14,24 @@
 
     quizApp.customQuestionList = {
         partner: [
-            '<H2>How long have you been together?</H2>', 
-            '<H2>How likely is it your parnter has heard "Thankyou, Next" by Ariana Grande</H2>', 
-            '<H2>How likely is it you partner will get you something?</H2>'
+            '<H3>How long have you been together?</H3>', 
+            '<H3>How likely is it your parnter has heard "Thankyou, Next" by Ariana Grande</H3>', 
+            '<H3>How likely is it you partner will get you something?</H3>'
         ],
         family: [
-            '<H2>How likely is it you are going to see this person over the holidays?</H2>',
-            '<H2>How likely is it you partner will get you something?</H2>',
-            '<H2>question3</H2>'
+            '<H3>How likely is it you are going to see this person over the holidays?</H3>',
+            '<H3>How likely is it you partner will get you something?</H3>',
+            '<H3>question3</H3>'
         ],
         friend: [
-            '<H2></H2>',
-            '<H2>How likely is it you partner will get you something?</H2>',
-            '<H2>question3</H2>'
+            '<H3></H3>',
+            '<H3>How likely is it you partner will get you something?</H3>',
+            '<H3>question3</H3>'
         ],
         aquaintance: [
-            '<H2>How likely is it you partner will get you something?</H2>',
-            '<H2>How often do you run into this person?</H2>',
-            '<H2>Would it be difficult to cut them out of your life entirely?</H2>'
+            '<H3>How likely is it you partner will get you something?</H3>',
+            '<H3>How often do you run into this person?</H3>',
+            '<H3>Would it be difficult to cut them out of your life entirely?</H3>'
         ]
     }
 
@@ -197,7 +197,6 @@
         quizApp.answerCollector('secondAnswer');
         quizApp.answerCollector('thirdAnswer');
         quizApp.giftTypeCalculator();
-
     }
     
     quizApp.getNames = function() {
@@ -228,7 +227,7 @@
             // console.log('provide Questions');
             let i = 1;
             quizApp.customQuestionList[quizApp.relationshipChoice].forEach(function(question){
-                $(`.question${i}`).prepend(question);  
+                $(`.question${i} .question-container`).prepend(question);  
                 let n = 1;            
                 quizApp.answerList[quizApp.relationshipChoice][`question${i}`].forEach(function(answer){
                     $(`.question${i}-answer${n}`).prepend(answer);

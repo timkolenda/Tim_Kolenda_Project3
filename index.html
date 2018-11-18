@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
         <main id="quiz" class="quiz">
-            <section class="who-is-playing game-section">
-                <form class="names">
+            <section class="who-is-playing game-section name-submission">
+                <div class="heading">
                     <h2>Should I Gift</h2>
-                    <h1>The best way to decide who is worth shopping for this holiday season!</h1>
-                    <div>
+                    <h1>Decide who is worth shopping for this holiday season!</h1>
+                </div>
+                <form class="">
+                    <div class="names">
                         <div class="name-input">
                             <label for="user-name" >Your Name</label>
                             <input type="text" id="user-name"> 
                         </div>
                         <div class="name-input">
-                            <label for="reciever-name" >Potential Recipients Name</label>
+                            <label for="reciever-name">Their Name</label>
                             <input type="text" id="reciever-name">
                         </div>
                     </div>
@@ -31,7 +33,9 @@
                 </form>
             </section>
             <section class="game-section base-question visuallyhidden">
-                <h2>Whitch of the following best describes your relationship</h2>
+                <div class="question-container">
+                    <h3>Whitch of the following best describes your relationship</h3>
+                </div>
                 <form class="relationshipChoice">
                     <label class="relationship-choice-partner" for="partner">Partner</label>
                     <input type="radio" name="relationship-option" id="partner" value="partner">
@@ -45,21 +49,25 @@
                 </form>
             </section>
             <section class="question1 game-section visuallyhidden">  
-                <!-- H2 will be dropped in here through JS -->
+                <div class="question-container">
+                    <!-- H3 will be dropped in here through JS -->
+                </div>
                 <form class="firstAnswer">
                     <label for="question1-answer1" class="question1-answer1"></label>
-                    <input type="radio" name="answer-to-question1" id="question1-answer1" value=4>
+                    <input type="radio" name="answer-to-question1" id="question1-answer1" value="4">
                     <label for="question1-answer2" class="question1-answer2"></label>
-                    <input type="radio" name="answer-to-question1" id="question1-answer2" value=3>
+                    <input type="radio" name="answer-to-question1" id="question1-answer2" value="3">
                     <label for="question1-answer3" class="question1-answer3"></label>
-                    <input type="radio" name="answer-to-question1" id="question1-answer3" value=2>
+                    <input type="radio" name="answer-to-question1" id="question1-answer3" value="2">
                     <label for="question1-answer4" class="question1-answer4"></label>
-                    <input type="radio" name="answer-to-question1" id="question1-answer4" value=1> 
+                    <input type="radio" name="answer-to-question1" id="question1-answer4" value="1"> 
                     <button class="game-section-button">Submit</button>
                 </form>
             </section>
             <section class="question2 game-section visuallyhidden">
-                <!-- H2 will be dropped in here through JS -->
+                <div class="question-container">
+                    <!-- H3 will be dropped in here through JS -->
+                </div>
                 <form class="secondAnswer">
                     <label for="question2-answer1" class="question1-answer1"></label>
                     <input type="radio" name="answer-to-question1" id="question2-answer1" value=4>
@@ -73,7 +81,9 @@
                 </form>
             </section>
             <section class="question3 game-section visuallyhidden">
-                <!-- H2 will be dropped in here through JS -->
+                <div class="question-container">
+                    <!-- H3 will be dropped in here through JS -->
+                </div>
                 <form class="thirdAnswer">
                     <label for="question3-answer1" class="question1-answer1"></label>
                     <input type="radio" name="answer-to-question1" id="question3-answer1" value=4>
@@ -103,7 +113,7 @@
 
 
 
-    </div>
+    <!-- </div> -->
 
 
 
