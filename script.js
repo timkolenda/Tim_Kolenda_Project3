@@ -24,7 +24,7 @@
             '<H3>question3</H3>'
         ],
         friend: [
-            '<H3></H3>',
+            '<H3>asldkjfla;ksdjflasdjf</H3>',
             '<H3>How likely is it you partner will get you something?</H3>',
             '<H3>question3</H3>'
         ],
@@ -197,6 +197,7 @@
         quizApp.answerCollector('secondAnswer');
         quizApp.answerCollector('thirdAnswer');
         quizApp.giftTypeCalculator();
+        quizApp.activeOption();
     }
     
     quizApp.getNames = function() {
@@ -230,7 +231,7 @@
                 $(`.question${i} .question-container`).prepend(question);  
                 let n = 1;            
                 quizApp.answerList[quizApp.relationshipChoice][`question${i}`].forEach(function(answer){
-                    $(`.question${i}-answer${n}`).prepend(answer);
+                    $(`.question${i}-answer${n} .answer-button`).prepend(`<p>${answer}</p>`);
                     // console.log(n);
                     n++;
                 });
@@ -276,52 +277,9 @@
     }
 
 
-    //set i to 0
-    //set i = 1
-    //listen for click button changeGBi
-    //hide GB(i-1)
-    //display GBi
-    //return
-    //i++
 
+// JS STYLING
 
-
-    //give answers value
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Should I get this person a gift
-
-
-
-
-
-
-//provide a slider that allows the user to imput their christmas spirit <<<maybe
-//store christmas spirit as a variable <<<maybe
-
-
-
-
-
-//***Data Management */
-
-//Create an object that contains 4 arrays
-//Object should be named Results
-//Each array within the object should have at least 
-
-
-
-//each array will contain 3 final options that will be selected at random to ensure variation in responses
-
-
+    quizApp.activeOption = function() {
+        $('.radio-button-answer:active').on()
+    }
