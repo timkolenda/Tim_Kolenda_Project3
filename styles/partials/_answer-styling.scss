@@ -2,8 +2,9 @@
 .answer-option-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 .answer-option {
     // padding: 3%;
