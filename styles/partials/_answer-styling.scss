@@ -16,15 +16,18 @@
         p {
             margin: 0;
             font-size: 1.6rem;
-
         }
     } 
     input {
-        // z-index: -1;
         position: absolute;
-        // opacity: 0;
-        // bottom: 20px;
-        :focus ~ label{
+        opacity: 0;
+        &:focus ~ label .answer-button{
+            background-color: tomato;
+        }
+        &:hover ~ label .answer-button{
+            background-color: tomato;
+        }
+        &:checked ~ label .answer-button{
             background-color: tomato;
         }
     }

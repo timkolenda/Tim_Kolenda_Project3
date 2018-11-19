@@ -283,5 +283,7 @@
 // JS STYLING
 
     quizApp.activeOption = function() {
-        $('.radio-button-answer:active').on()
+        if($('.radio-button-answer:checked')){
+            console.log("checked");
+        }
     }

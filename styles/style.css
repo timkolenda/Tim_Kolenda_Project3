@@ -303,6 +303,11 @@ form {
       margin: 0;
       font-size: 1.6rem; }
   .answer-option input {
-    position: absolute; }
-    .answer-option input :focus ~ label {
+    position: absolute;
+    opacity: 0; }
+    .answer-option input:focus ~ label .answer-button {
+      background-color: tomato; }
+    .answer-option input:hover ~ label .answer-button {
+      background-color: tomato; }
+    .answer-option input:checked ~ label .answer-button {
       background-color: tomato; }
