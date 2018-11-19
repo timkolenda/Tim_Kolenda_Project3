@@ -233,6 +233,8 @@
                 quizApp.answerList[quizApp.relationshipChoice][`question${i}`].forEach(function(answer){
                     $(`.question${i}-answer${n} .answer-button`).prepend(`<p>${answer}</p>`);
                     // console.log(n);
+                    // console.log($(`.question${i}-answer${n} .answer-button`));
+                    // console.log(`<p>${answer}</p>`);
                     n++;
                 });
                 i++;
