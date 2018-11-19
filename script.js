@@ -126,7 +126,7 @@
     response = {
         goodGift: {
             partner: [
-                `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`,
+                `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you next year!`,
                 `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`,
                 `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`
             ],            

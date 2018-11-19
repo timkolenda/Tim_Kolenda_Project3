@@ -361,14 +361,24 @@ form {
   .text-option .answer-button p {
     font-size: 1.2rem; } }
 
-.response-generator,
+.response-generator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .response {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
 .response-generator .generate-response {
-  margin: auto; }
+  margin: auto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  height: 65px; }
 
 .response h3 {
   margin: auto;

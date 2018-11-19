@@ -1,10 +1,16 @@
-.response-generator,
+.response-generator{
+    display: flex;
+    align-items: center;
+}
 .response {
     display: flex;
 }
 
 .response-generator .generate-response {
     margin: auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+    height: 65px;
 }
 
 .response h3 {
