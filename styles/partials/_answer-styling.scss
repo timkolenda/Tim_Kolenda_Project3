@@ -2,13 +2,11 @@
 .answer-option-container {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
     flex-grow: 1;
 }
 .answer-option {
-    // padding: 3%;
-    // border: 1px solid black;
     text-align: center;
     .answer-button {
         width: 100%;
@@ -31,5 +29,23 @@
         &:checked ~ label .answer-button{
             background-color: $primary-accent-color;
         }
+    }
+}
+
+
+@media(max-width: 650px){
+    .answer-option-container {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    margin-bottom: 5px;
+    // flex-grow: 1;
+    }
+
+}
+
+@media(max-width: 400px){
+    .text-option .answer-button p {
+        font-size: 1.4rem;
     }
 }

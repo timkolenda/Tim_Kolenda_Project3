@@ -9,215 +9,215 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <!-- <div class="wrapper"> -->
-        <main id="quiz" class="quiz">
-            <section class="who-is-playing game-section name-submission">
-                <div class="heading">
-                    <h2>Should I Gift</h2>
-                    <h1>Decide who is worth shopping for this holiday season!</h1>
+    <main id="quiz" class="quiz">
+        <section class="who-is-playing game-section name-submission">
+            <div class="heading">
+                <h2>Should I Gift</h2>
+                <h1>Decide who is worth shopping for this holiday season!</h1>
+            </div>
+            <form class="name-collection-form">
+                <div class="names">
+                    <div class="name-input">
+                        <label for="user-name" >Your Name</label>
+                        <input type="text" id="user-name" required > 
+                    </div>
+                    <div class="name-input">
+                        <label for="receiver-name">Their Name</label>
+                        <input type="text" id="receiver-name" required >
+                    </div>
                 </div>
-                <form class="name-collection-form">
-                    <div class="names">
-                        <div class="name-input">
-                            <label for="user-name" >Your Name</label>
-                            <input type="text" id="user-name"> 
-                        </div>
-                        <div class="name-input">
-                            <label for="receiver-name">Their Name</label>
-                            <input type="text" id="receiver-name">
-                        </div>
-                    </div>
-                    <div class="button-container">
-                        <button class="game-section-button">Get Started</button>
-                    </div>
-                </form>
-            </section>
-            <section class="game-section base-question visuallyhidden">
-                <div class="question-container">
-                    <!-- H3 will be dropped in here through JS -->
+                <div class="button-container">
+                    <button class="game-section-button">Get Started</button>
                 </div>
-                <form class="relationshipChoice">
-                    <div class="answer-option-container">
-                        <div class="answer-option">
-                            <input type="radio" name="relationship-option" id="partner" value="partner" class="">
-                            <label class="relationship-choice-partner" for="partner">
-                                <div class="answer-button">
-                                    <p>Partner</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="relationship-option" id="family" value="family" class="">
-                            <label class="relationship-choice-family" for="family">
-                                <div class="answer-button">
-                                    <p>Family</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="relationship-option" id="friend" value="friend" class="">
-                            <label class="relationship-choice-friend" for="friend">
-                                <div class="answer-button">
-                                    <p>Friend</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance" class="">   
-                            <label class="relationship-choice-aquaintance" for="aquaintance">
-                                <div class="answer-button">
-                                    <p>Aquaintance</p>
-                                </div>
-                            </label>
-                        </div>
+            </form>
+        </section>
+        <section class="game-section base-question visuallyhidden">
+            <div class="question-container">
+                <!-- H3 will be dropped in here through JS -->
+            </div>
+            <form class="relationshipChoice">
+                <div class="answer-option-container">
+                    <div class="answer-option">
+                        <input type="radio" name="relationship-option" id="partner" value="partner" class="">
+                        <label class="relationship-choice-partner" for="partner">
+                            <div class="answer-button">
+                                <p>Partner</p>
+                            </div>
+                        </label>
                     </div>
-                    <button class="question-list-trigger game-section-button">Next</button>
-                </form>
-            </section>
-            <section class="question1 game-section visuallyhidden">  
-                <div class="question-container">
-                    <!-- H3 will be dropped in here through JS -->
+                    <div class="answer-option">
+                        <input type="radio" name="relationship-option" id="family" value="family" class="">
+                        <label class="relationship-choice-family" for="family">
+                            <div class="answer-button">
+                                <p>Family</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="relationship-option" id="friend" value="friend" class="">
+                        <label class="relationship-choice-friend" for="friend">
+                            <div class="answer-button">
+                                <p>Friend</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance" class="">   
+                        <label class="relationship-choice-aquaintance" for="aquaintance">
+                            <div class="answer-button">
+                                <p>Aquaintance</p>
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <form class="firstAnswer">
-                    <div class="answer-option-container">
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question1-answer1" value="4" class="">
-                            <label for="question1-answer1" class="question1-answer1">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question1-answer2" value="3" class="">
-                            <label for="question1-answer2" class="question1-answer2">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question1-answer3" value="2" class="">
-                            <label for="question1-answer3" class="question1-answer3">
-                                <div class="answer-button">
-                                     <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question1-answer4" value="1" class=""> 
-                            <label for="question1-answer4" class="question1-answer4">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
+                <button class="question-list-trigger game-section-button">Next</button>
+            </form>
+        </section>
+        <section class="question1 game-section visuallyhidden">  
+            <div class="question-container">
+                <!-- H3 will be dropped in here through JS -->
+            </div>
+            <form class="firstAnswer">
+                <div class="answer-option-container">
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question1-answer1" value="4" class="">
+                        <label for="question1-answer1" class="question1-answer1">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
                     </div>
-                    <button class="game-section-button">Submit</button>
-                </form>
-            </section>
-            <section class="question2 game-section visuallyhidden">
-                <div class="question-container">
-                    <!-- H3 will be dropped in here through JS -->
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question1-answer2" value="3" class="">
+                        <label for="question1-answer2" class="question1-answer2">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question1-answer3" value="2" class="">
+                        <label for="question1-answer3" class="question1-answer3">
+                            <div class="answer-button">
+                                    <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question1-answer4" value="1" class=""> 
+                        <label for="question1-answer4" class="question1-answer4">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <form class="secondAnswer">
-                    <div class="answer-option-container">
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question2-answer1" value="4" class="">
-                            <label for="question2-answer1" class="question2-answer1">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question2-answer2" value="3" class="">
-                            <label for="question2-answer2" class="question2-answer2">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question2-answer3" value="2" class="">
-                            <label for="question2-answer3" class="question2-answer3">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS-->
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question2-answer4" value="1" class="">
-                            <label for="question2-answer4" class="question2-answer4">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS--> 
-                                </div>
-                            </label>
-                        </div>
+                <button class="game-section-button">Submit</button>
+            </form>
+        </section>
+        <section class="question2 game-section visuallyhidden">
+            <div class="question-container">
+                <!-- H3 will be dropped in here through JS -->
+            </div>
+            <form class="secondAnswer">
+                <div class="answer-option-container">
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question2-answer1" value="4" class="">
+                        <label for="question2-answer1" class="question2-answer1">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
                     </div>
-                    <button class="game-section-button">Submit</button>
-                </form>
-            </section>
-            <section class="question3 game-section visuallyhidden">
-                <div class="question-container">
-                    <!-- H3 will be dropped in here through JS -->
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question2-answer2" value="3" class="">
+                        <label for="question2-answer2" class="question2-answer2">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question2-answer3" value="2" class="">
+                        <label for="question2-answer3" class="question2-answer3">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS-->
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question2-answer4" value="1" class="">
+                        <label for="question2-answer4" class="question2-answer4">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS--> 
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <form class="thirdAnswer">
-                    <div class="answer-option-container">
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question3-answer1" value="4" class="visuallyhidden">
-                            <label for="question3-answer1" class="question3-answer1">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS--> 
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question3-answer2" value="3" class="visuallyhidden">
-                            <label for="question3-answer2" class="question3-answer2">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS--> 
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question3-answer3" value="2" class="visuallyhidden">
-                            <label for="question3-answer3" class="question3-answer3">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS--> 
-                                </div>
-                            </label>
-                        </div>
-                        <div class="answer-option">
-                            <input type="radio" name="answer-to-question1" id="question3-answer4" value="1" class="visuallyhidden"> 
-                            <label for="question3-answer4" class="question3-answer4">
-                                <div class="answer-button">
-                                    <!-- <p> will be dropped in here through JS--> 
-                                </div>
-                            </label>
-                        </div>
+                <button class="game-section-button">Submit</button>
+            </form>
+        </section>
+        <section class="question3 game-section visuallyhidden">
+            <div class="question-container">
+                <!-- H3 will be dropped in here through JS -->
+            </div>
+            <form class="thirdAnswer">
+                <div class="answer-option-container">
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question3-answer1" value="4" class="visuallyhidden">
+                        <label for="question3-answer1" class="question3-answer1">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS--> 
+                            </div>
+                        </label>
                     </div>
-                    <button class="game-section-button">Submit</button>
-                </form>
-            </section>
-            <section class="response game-section visuallyhidden">
-                <a href="#" class="generateResponse game-section-button">Generate Response</a>
-
-            </section>
-            
-            
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question3-answer2" value="3" class="visuallyhidden">
+                        <label for="question3-answer2" class="question3-answer2">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS--> 
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question3-answer3" value="2" class="visuallyhidden">
+                        <label for="question3-answer3" class="question3-answer3">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS--> 
+                            </div>
+                        </label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer-to-question1" id="question3-answer4" value="1" class="visuallyhidden"> 
+                        <label for="question3-answer4" class="question3-answer4">
+                            <div class="answer-button">
+                                <!-- <p> will be dropped in here through JS--> 
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <button class="game-section-button">Submit</button>
+            </form>
+        </section>
+        <section class="response-generator game-section visuallyhidden">
+            <button class="generate-response game-section-button">Should I Gift?</button>
+        </section>
+        <section class="response game-section visuallyhidden">
+            <h3>
+                <!-- H3 will be dropped in here through JS -->
+            </h3>
+        </section>
         
         
         
-        
-        </main>
+    
+    
+    
+    
+    </main>
     
     
 
-
-
-
-    <!-- </div> -->
 
 
 

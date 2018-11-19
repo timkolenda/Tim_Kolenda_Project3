@@ -126,68 +126,68 @@
     response = {
         goodGift: {
             partner: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`,
+                `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`,
+                `Sound's like ${quizApp.receiverName} is a pretty great partner! Kinda weird that you are taking a quiz to find out if you should get them a gift. Maybe you can get them the gift of not having to date you!`
             ],            
             family: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `You're family loves you! Stop being cheap, get them something nice!`,
+                `You're family loves you! Stop being cheap, get them something nice!`,
+                `You're family loves you! Stop being cheap, get them something nice!`,
             ],
             friend: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `You're friend loves you! Stop being cheap, get them something nice!`,
+                `You're friend loves you! Stop being cheap, get them something nice!`,
+                `You're friend loves you! Stop being cheap, get them something nice!`
             ],      
             aquaintance: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `Might be a good idea to build some goodwill. It would be worthwile to grab ${quizApp.receiverName}`,
+                `Might be a good idea to build some goodwill. It would be worthwile to grab ${quizApp.receiverName}`,
+                `Might be a good idea to build some goodwill. It would be worthwile to grab ${quizApp.receiverName}`
             ]
         },    
         mediocreGift: {
             partner: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `You could probably get away with some drug store flowers if I'm being honest`,
+                `You could probably get away with some drug store flowers if I'm being honest`,
+                `You could probably get away with some drug store flowers if I'm being honest`
             ],
             family: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`,
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`,
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`
             ],
             friend: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`,
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`,
+                `Sounds like ${quizApp.receiverName} is in cheap bottle of wine territory.`
             ],
             aquaintance: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `${quizApp.receiverName} seems alright. Sign a card if you see one going around.`,
+                `${quizApp.receiverName} seems alright. Sign a card if you see one going around.`,
+                `${quizApp.receiverName} seems alright. Sign a card if you see one going around.`
             ]
         },    
         noGift: {
             partner: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `I wouldn't bother, I don't anticipate this lasting anyway.`,
+                `I wouldn't bother, I don't anticipate this lasting anyway.`,
+                `I wouldn't bother, I don't anticipate this lasting anyway.`
             ],
             family: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `Family is family for life! I say take the free pass and don't bother.`,
+                `Family is family for life! I say take the free pass and don't bother.`,
+                `Family is family for life! I say take the free pass and don't bother.`
             ],
             friend: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `A real friend doesn't need material gestures. Don't bother.`,
+                `A real friend doesn't need material gestures. Don't bother.`,
+                `A real friend doesn't need material gestures. Don't bother.`
             ],
             aquaintance: [
-                'randomResponse1',
-                'randomResponse2',
-                'randonResponse3'
+                `You don't owe ${quizApp.receiverName} anything.`,
+                `You don't owe ${quizApp.receiverName} anything.`,
+                `You don't owe ${quizApp.receiverName} anything.`
             ]
         }
     }    
@@ -201,7 +201,11 @@
             quizApp.userName = $('#user-name').val();
             quizApp.receiverName = $('#receiver-name').val();
             quizApp.addArraysToQuizApp();
-            quizApp.provideQuestionsToUser();
+            if (quizApp.userName === undefined || quizApp.receiverName === undefined) {
+                return 
+            } else {
+                quizApp.provideQuestionsToUser();
+            }
         });
     }   
 
@@ -222,11 +226,11 @@
             let i = 1;
             quizApp.customQuestionList[quizApp.relationshipChoice].forEach(function(question){
                 $(`.question${i} .question-container`).prepend(question); 
-                console.log(question); 
+                // console.log(question); 
                 let n = 1;            
                 quizApp.answerList[quizApp.relationshipChoice][`question${i}`].forEach(function(answer){
                     $(`.question${i}-answer${n} .answer-button`).prepend(`<p>${answer}</p>`);
-                    console.log(answer);
+                    // console.log(answer);
                     n++;
                 });
                 i++;
@@ -235,7 +239,7 @@
     };
     
     quizApp.giftTypeCalculator = function() {
-        $('.generateResponse').on('click', function(){
+        $('.generate-response').on('click', function(){
             quizApp.score = parseInt(quizApp.firstAnswer) + parseInt(quizApp.secondAnswer) + parseInt(quizApp.thirdAnswer);
             console.log(`score ${quizApp.score}`);
             if (quizApp.score <= 4){
@@ -256,12 +260,11 @@
         console.log(`arrayNumber is ${arrayNumber}`);
         const response = quizApp.response[quizApp.giftType][quizApp.relationshipChoice][0];
         console.log(response);
-        $('.response').append(response);
+        $('.response h3').append(response);
     }
 
     quizApp.nextSection = function() {
         $('.game-section-button').on('click', function(){
-            console.log("clicked");
             $(this).parents('.game-section').toggleClass('visuallyhidden');
             $(this).parents('.game-section').next().toggleClass('visuallyhidden');
         });
