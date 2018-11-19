@@ -7,7 +7,7 @@
 }
 .answer-option {
     // padding: 3%;
-    border: 1px solid black;
+    // border: 1px solid black;
     text-align: center;
     .answer-button {
         width: 100%;
@@ -22,13 +22,13 @@
         position: absolute;
         opacity: 0;
         &:focus ~ label .answer-button{
-            background-color: tomato;
+            background-color: $primary-accent-color;
         }
         &:hover ~ label .answer-button{
-            background-color: tomato;
+            background-color: $primary-accent-color;
         }
         &:checked ~ label .answer-button{
-            background-color: tomato;
+            background-color: $primary-accent-color;
         }
     }
 }

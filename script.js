@@ -192,7 +192,7 @@
         quizApp.getNames();
         quizApp.nextSection();
         quizApp.answerCollector('relationshipChoice');
-        quizApp.provideQuestionsToUser();
+        // quizApp.provideQuestionsToUser();
         quizApp.answerCollector('firstAnswer');
         quizApp.answerCollector('secondAnswer');
         quizApp.answerCollector('thirdAnswer');
@@ -201,13 +201,11 @@
     }
     
     quizApp.getNames = function() {
-        $('.names').on('submit', function(event){
+        $('.name-collection-form').on('submit', function(event){
             event.preventDefault();
-            // console.log('submitted');
             quizApp.userName = $('#user-name').val();
-            quizApp.recieverName = $('#reciever-name').val();
-            // console.log(quizApp.userName);
-            // console.log(quizApp.recieverName);
+            quizApp.receiverName = $('#receiver-name').val();
+            quizApp.provideQuestionsToUser();
         });
     }   
 
@@ -224,6 +222,7 @@
     //take the relationshipChoice variable and pass it through custom questions object to get the question array
     
     quizApp.provideQuestionsToUser = function() {
+        $('.base-question .question-container').append(`<H3>How do you know ${quizApp.receiverName}?</H3>`);
         $('.relationshipChoice').on('submit', function(){
             // console.log('provide Questions');
             let i = 1;

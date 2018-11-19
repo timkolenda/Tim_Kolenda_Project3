@@ -293,7 +293,6 @@ form {
   margin-bottom: 20px; }
 
 .answer-option {
-  border: 1px solid black;
   text-align: center; }
   .answer-option .answer-button {
     width: 100%;
@@ -306,8 +305,8 @@ form {
     position: absolute;
     opacity: 0; }
     .answer-option input:focus ~ label .answer-button {
-      background-color: tomato; }
+      background-color: #8bd3e7; }
     .answer-option input:hover ~ label .answer-button {
-      background-color: tomato; }
+      background-color: #8bd3e7; }
     .answer-option input:checked ~ label .answer-button {
-      background-color: tomato; }
+      background-color: #8bd3e7; }
