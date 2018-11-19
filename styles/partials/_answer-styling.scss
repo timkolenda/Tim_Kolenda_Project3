@@ -8,6 +8,10 @@
 }
 .answer-option {
     text-align: center;
+    border-top: 1px dotted black;
+    &:last-child {
+        border-bottom: 1px dotted black;
+    }
     .answer-button {
         width: 100%;
         height: 100%;
@@ -46,6 +50,7 @@
 
 @media(max-width: 400px){
     .text-option .answer-button p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }
+

@@ -38,7 +38,7 @@
             <form class="relationshipChoice">
                 <div class="answer-option-container">
                     <div class="answer-option">
-                        <input type="radio" name="relationship-option" id="partner" value="partner" class="">
+                        <input type="radio" name="relationship-option" id="partner" value="partner" required>
                         <label class="relationship-choice-partner" for="partner">
                             <div class="answer-button">
                                 <p>Partner</p>
@@ -46,7 +46,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="relationship-option" id="family" value="family" class="">
+                        <input type="radio" name="relationship-option" id="family" value="family" required>
                         <label class="relationship-choice-family" for="family">
                             <div class="answer-button">
                                 <p>Family</p>
@@ -54,7 +54,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="relationship-option" id="friend" value="friend" class="">
+                        <input type="radio" name="relationship-option" id="friend" value="friend" required>
                         <label class="relationship-choice-friend" for="friend">
                             <div class="answer-button">
                                 <p>Friend</p>
@@ -62,7 +62,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance" class="">   
+                        <input type="radio" name="relationship-option" id="aquaintance" value="aquaintance" required>   
                         <label class="relationship-choice-aquaintance" for="aquaintance">
                             <div class="answer-button">
                                 <p>Aquaintance</p>
@@ -70,7 +70,9 @@
                         </label>
                     </div>
                 </div>
-                <button class="question-list-trigger game-section-button">Next</button>
+                <div class="button-container">
+                    <button class="question-list-trigger game-section-button">Next</button>
+                </div>
             </form>
         </section>
         <section class="question1 game-section visuallyhidden">  
@@ -80,7 +82,7 @@
             <form class="firstAnswer">
                 <div class="answer-option-container">
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question1-answer1" value="4" class="">
+                        <input type="radio" name="answer-to-question1" id="question1-answer1" value="4" required>
                         <label for="question1-answer1" class="question1-answer1">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -88,7 +90,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question1-answer2" value="3" class="">
+                        <input type="radio" name="answer-to-question1" id="question1-answer2" value="3" required>
                         <label for="question1-answer2" class="question1-answer2">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -96,7 +98,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question1-answer3" value="2" class="">
+                        <input type="radio" name="answer-to-question1" id="question1-answer3" value="2" required>
                         <label for="question1-answer3" class="question1-answer3">
                             <div class="answer-button">
                                     <!-- <p> will be dropped in here through JS-->
@@ -104,7 +106,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question1-answer4" value="1" class=""> 
+                        <input type="radio" name="answer-to-question1" id="question1-answer4" value="1" required> 
                         <label for="question1-answer4" class="question1-answer4">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -112,7 +114,9 @@
                         </label>
                     </div>
                 </div>
-                <button class="game-section-button">Submit</button>
+                <div class="button-container">
+                    <button class="game-section-button">Next</button>
+                </div>
             </form>
         </section>
         <section class="question2 game-section visuallyhidden">
@@ -122,7 +126,7 @@
             <form class="secondAnswer">
                 <div class="answer-option-container">
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question2-answer1" value="4" class="">
+                        <input type="radio" name="answer-to-question1" id="question2-answer1" value="4" required>
                         <label for="question2-answer1" class="question2-answer1">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -130,7 +134,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question2-answer2" value="3" class="">
+                        <input type="radio" name="answer-to-question1" id="question2-answer2" value="3" required>
                         <label for="question2-answer2" class="question2-answer2">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -138,7 +142,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question2-answer3" value="2" class="">
+                        <input type="radio" name="answer-to-question1" id="question2-answer3" value="2" required>
                         <label for="question2-answer3" class="question2-answer3">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS-->
@@ -146,7 +150,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question2-answer4" value="1" class="">
+                        <input type="radio" name="answer-to-question1" id="question2-answer4" value="1" required>
                         <label for="question2-answer4" class="question2-answer4">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS--> 
@@ -154,7 +158,9 @@
                         </label>
                     </div>
                 </div>
-                <button class="game-section-button">Submit</button>
+                <div class="button-container">
+                    <button class="game-section-button">Next</button>
+                </div>
             </form>
         </section>
         <section class="question3 game-section visuallyhidden">
@@ -164,7 +170,7 @@
             <form class="thirdAnswer">
                 <div class="answer-option-container">
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question3-answer1" value="4" class="visuallyhidden">
+                        <input type="radio" name="answer-to-question1" id="question3-answer1" value="4" required>
                         <label for="question3-answer1" class="question3-answer1">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS--> 
@@ -172,7 +178,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question3-answer2" value="3" class="visuallyhidden">
+                        <input type="radio" name="answer-to-question1" id="question3-answer2" value="3" required>
                         <label for="question3-answer2" class="question3-answer2">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS--> 
@@ -180,7 +186,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question3-answer3" value="2" class="visuallyhidden">
+                        <input type="radio" name="answer-to-question1" id="question3-answer3" value="2" required>
                         <label for="question3-answer3" class="question3-answer3">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS--> 
@@ -188,7 +194,7 @@
                         </label>
                     </div>
                     <div class="answer-option">
-                        <input type="radio" name="answer-to-question1" id="question3-answer4" value="1" class="visuallyhidden"> 
+                        <input type="radio" name="answer-to-question1" id="question3-answer4" value="1" required> 
                         <label for="question3-answer4" class="question3-answer4">
                             <div class="answer-button">
                                 <!-- <p> will be dropped in here through JS--> 
@@ -196,11 +202,15 @@
                         </label>
                     </div>
                 </div>
-                <button class="game-section-button">Submit</button>
+                <div class="button-container">
+                    <button class="game-section-button">Next</button>
+                </div>
             </form>
         </section>
         <section class="response-generator game-section visuallyhidden">
-            <button class="generate-response game-section-button">Should I Gift?</button>
+            <div class="buttoncontainer">
+                <button class="generate-response game-section-button">Should I Gift?</button>
+            </div>
         </section>
         <section class="response game-section visuallyhidden">
             <h3>

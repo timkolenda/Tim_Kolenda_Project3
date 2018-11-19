@@ -219,7 +219,7 @@ form {
     max-width: 100%;
     padding: 5px; } }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   h3 {
     font-size: 1.8rem; }
   .quiz {
@@ -263,9 +263,22 @@ form {
   justify-content: space-between;
   width: 45%; }
   .name-submission .name-input label {
-    font-size: 2.5rem; }
+    font-size: 1.6rem;
+    text-align: center; }
   .name-submission .name-input input {
-    width: 100%; }
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center; }
+
+@media (max-width: 450px) {
+  .name-submission .names {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; } }
 
 .button-container {
   display: -webkit-box;
@@ -274,14 +287,17 @@ form {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 20px; }
+  padding-top: 20px;
+  font-size: 1.6rem;
+  font-weight: bold; }
 
 .game-section-button {
   text-align: center;
   width: 200px;
   height: 50px;
   text-transform: uppercase;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: #8bd3e7; }
 
 .question-container {
   display: -webkit-box;
@@ -292,12 +308,12 @@ form {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .question-container h3 {
+    margin-bottom: 0; }
 
 @media (max-width: 650px) {
   .question-container {
-    padding: 0 0 20px 0; }
-    .question-container h3 {
-      margin-bottom: 0; } }
+    padding: 0 0 20px 0; } }
 
 .answer-option-container {
   display: -webkit-box;
@@ -316,7 +332,10 @@ form {
   flex-grow: 1; }
 
 .answer-option {
-  text-align: center; }
+  text-align: center;
+  border-top: 1px dotted black; }
+  .answer-option:last-child {
+    border-bottom: 1px dotted black; }
   .answer-option .answer-button {
     width: 100%;
     height: 100%;
@@ -340,7 +359,7 @@ form {
 
 @media (max-width: 400px) {
   .text-option .answer-button p {
-    font-size: 1.4rem; } }
+    font-size: 1.2rem; } }
 
 .response-generator,
 .response {
