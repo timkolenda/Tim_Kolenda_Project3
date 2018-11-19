@@ -202,6 +202,7 @@
             quizApp.receiverName = $('#receiver-name').val();
             quizApp.addArraysToQuizApp();
             if (quizApp.userName === undefined || quizApp.receiverName === undefined) {
+                console.log("names aren't entered");
                 return 
             } else {
                 quizApp.provideQuestionsToUser();
@@ -213,14 +214,13 @@
         $(`.${question}`).on('submit', function(event){
             event.preventDefault();     
             quizApp[question] = $(`.${question} input[type=radio]:checked`).val();
+            
         });
     } 
 
     //take the relationshipChoice variable and pass it through custom questions object to get the question array
     
-    quizApp.provideQuestionsToUser = function() {
-        console.log(quizApp.userName);
-        console.log(quizApp.receiverName);
+quizApp.provideQuestionsToUser = function() {
         $('.base-question .question-container').append(`<H3>How do you know ${quizApp.receiverName}?</H3>`);
         $('.relationshipChoice').on('submit', function(){
             let i = 1;
